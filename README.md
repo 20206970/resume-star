@@ -46,7 +46,6 @@ AI 驱动的简历素材增强工具，基于 [Claude Code Skill](https://docs.a
 ## 项目状态
 
 早期规划阶段，当前包含：
-- `doc/产品需求规格说明书.md` — 完整 PRD
 - `docs/product-design.md` — 产品设计文档
 - `resume-star/` — Skill 实现
 
