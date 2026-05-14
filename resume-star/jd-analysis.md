@@ -56,3 +56,36 @@
 - Must-have: Java, Spring Boot, MySQL
 - Nice-to-have: SQL 调优, Redis, MQ, 微服务
 - 隐性信号: "独立完成模块开发" → 需要展示独立负责能力；"微服务优先" → 公司在做服务化改造
+
+## English JD Keywords
+
+### Hard Skills (English JD)
+- **Languages:** Java, Python, Go, C++, JavaScript, TypeScript, Rust, C#, Kotlin, Ruby, Swift
+- **Frameworks:** Spring Boot, React, Angular, Vue, Django, Flask, Express, Next.js, Flutter, Rails
+- **Tools/Platforms:** Docker, Kubernetes, AWS, GCP, Azure, MySQL, PostgreSQL, Redis, MongoDB, Kafka, RabbitMQ, Elasticsearch, Git, CI/CD, Jenkins, Terraform
+- **Domains:** machine learning, distributed systems, microservices, data pipeline, NLP, computer vision, DevOps, SRE
+
+### Soft Skills (English JD)
+- Collaboration: "work across teams", "cross-functional", "collaborate with"
+- Problem-solving: "troubleshoot", "debug production issues", "optimize performance"
+- Learning: "fast learner", "quick to pick up", "stay current with"
+- Communication: "communicate to non-technical stakeholders", "write technical documentation", "present findings"
+
+### Implicit Requirements (English JD)
+- High pressure: "thrive in a fast-paced environment", "wear multiple hats", "startup culture"
+- Independence: "own end-to-end", "self-starter", "take ownership from 0 to 1"
+- Full-stack: mentions both frontend and backend, mentions DevOps or infrastructure
+
+### Weight Indicators (English JD)
+- **Must-have:** "required", "must have", "proficient in", "strong experience with", listed in "Requirements" section
+- **Nice-to-have:** "preferred", "bonus", "nice to have", "familiarity with", "experience with X is a plus"
+
+## Example: Parsed English JD
+
+**输入 (English JD excerpt):**
+> Requirements: 1. Strong proficiency in Python and JavaScript/TypeScript 2. Experience with React and modern frontend frameworks 3. Familiarity with SQL databases (PostgreSQL preferred) 4. Experience with cloud services (AWS or GCP) is a plus 5. Excellent communication skills and ability to work in a cross-functional team
+
+**输出:**
+- Must-have: Python, JavaScript/TypeScript, React, SQL (PostgreSQL)
+- Nice-to-have: AWS, GCP
+- 隐性信号: "cross-functional team" → 需要展示跨团队协作能力；"AWS or GCP is a plus" → 公司在云化

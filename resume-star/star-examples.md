@@ -180,3 +180,104 @@
 ```
 
 所有输出使用中文，仅技术专有名词保留英文。
+
+## English Bullet Point Rules
+
+English Bullet Points follow the same structure as Chinese ones:
+
+1. **Start with a strong verb:** "Designed and implemented", "Developed", "Built", "Optimized", "Architected"
+2. **Avoid weak openers:** Do not use "Participated in", "Responsible for", "Helped with"
+3. **Structure:** Verb + What + How + Result/Impact
+4. **Length:** 1-3 lines, information-dense, do not sacrifice technical detail for brevity
+
+## Good English Examples
+
+### Example 5: Course Project — Chat Application (English)
+
+**Resume Bullet Point (copy-ready):**
+> Designed and implemented a real-time chat application using WebSocket and React, supporting group messaging, typing indicators, and message persistence with PostgreSQL, handling 100+ concurrent connections in load testing
+
+**STAR Breakdown:**
+- **Situation:** Needed a real-time communication platform for a distributed systems course project
+- **Task:** Designed the backend messaging architecture and implemented the WebSocket communication layer
+- **Action:** Built a WebSocket server with connection pooling and message queue buffering, implemented room-based message routing with PostgreSQL for persistence, and used React for the frontend with real-time state updates
+- **Result:** Successfully supported 100+ concurrent connections in load testing with sub-200ms message delivery latency
+
+---
+
+### Example 6: Internship — Data Pipeline Optimization (English)
+
+**Resume Bullet Point (copy-ready):**
+> Optimized ETL data pipeline processing time by 60% by redesigning the batch ingestion logic with Apache Spark, reducing daily processing window from 8 hours to 3 hours for 50GB+ datasets
+
+**STAR Breakdown:**
+- **Situation:** Company's daily data pipeline was taking 8+ hours to process, delaying downstream analytics reports
+- **Task:** Identify bottlenecks and optimize the ingestion pipeline during summer internship
+- **Action:** Profiled the pipeline to find I/O-bound stages, redesigned batch ingestion using Spark DataFrame operations with partition pruning and predicate pushdown, replaced row-by-row inserts with bulk operations
+- **Result:** Reduced processing time from 8 hours to 3 hours (60% improvement), enabling same-day analytics for downstream teams
+
+---
+
+## English Output Format
+
+When outputting in English, use this format:
+
+```markdown
+## Resume Bullet Points — Copy-Ready
+
+1. [Strong verb] [what you did], [how/technical approach], [result/impact with metrics]
+2. [Strong verb] [what you did], [how/technical approach], [result/impact with metrics]
+3. [Strong verb] [what you did], [how/technical approach], [result/impact with metrics]
+
+---
+
+## STAR Breakdown (Interview Prep)
+
+### 1. [Highlight keyword]
+- **Situation:** [Project context and challenge]
+- **Task:** [Your specific responsibility]
+- **Action:** [What you did and technologies used]
+- **Result:** [Quantified result or qualitative outcome]
+
+### 2. [Highlight keyword]
+- ...
+```
+
+## Batch Output Format (多 JD 批量处理)
+
+当用户一次提供多个 JD 时,输出一份对照表:
+
+````markdown
+## JD 批量匹配结果
+
+### JD 1: [公司名] [岗位名]
+**匹配度:** [高/中/低] ([X/Y] must-have 命中)
+**推荐亮点:** [亮点B], [亮点C]
+**Bullet Point:**
+> [针对此 JD 定制的分点描述]
+
+**最缺技能:** [项目中未体现的 must-have 技能]
+
+---
+
+### JD 2: [公司名] [岗位名]
+**匹配度:** [高/中/低] ([X/Y] must-have 命中)
+**推荐亮点:** [亮点A], [亮点D]
+**Bullet Point:**
+> [针对此 JD 定制的分点描述]
+
+**最缺技能:** [项目中未体现的 must-have 技能]
+
+---
+
+## 项目排序建议（基于所有 JD 的综合匹配）
+
+| 排序 | 项目 | 综合匹配度 | 最匹配的 JD |
+|------|------|-----------|------------|
+| 1 | 项目A | 高 | JD1, JD3 |
+| 2 | 项目C | 中 | JD2 |
+| 3 | 项目B | 低 | — |
+
+建议简历中优先写项目A和项目C。
+````
+
