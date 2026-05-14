@@ -56,6 +56,21 @@
 如果失败（非 Git 仓库）: 跳过，不影响扫描
 ```
 
+### Step 6: Quantification Scan (required)
+```
+目标: 收集可写入简历的量化数据
+命令序列:
+  1. bash: find <project_path> -name "*.py" -o -name "*.java" -o -name "*.js" -o -name "*.ts" -o -name "*.go" -o -name "*.rs" | wc -l
+     → 源码文件数
+  2. bash: find <project_path> -name "test_*" -o -name "*_test.*" -o -name "*Test.*" -o -name "test" -type d | head -20
+     → 测试文件/目录，可推断测试覆盖情况
+  3. bash: find <project_path> -name "*.py" -o -name "*.java" -o -name "*.js" -o -name "*.ts" | xargs wc -l 2>/dev/null | tail -1
+     → 总代码行数（大致）
+  4. glob <project_path>/**/CLAUDE.md
+     → 项目文档中的规模描述
+关注: 任何可以量化的数字——文件数、模块数、API 接口数、测试用例数、代码行数
+```
+
 ## Highlight Extraction Rules
 
 从扫描结果中提取亮点，按以下优先级:
@@ -64,6 +79,7 @@
 2. **用了什么技术:** 从 config 文件中提取的技术栈，特别是有亮点的技术（如用了 Redis 做缓存、用了消息队列）
 3. **做了什么功能:** 从目录结构和路由文件中推断的功能模块
 4. **有什么规模:** 数据量、并发量、用户量等可量化的指标（如果有）
+5. **量化数据采集:** 从 Step 6 中收集到的数字（文件数、代码行数、模块数、API 数、测试数）必须记录在亮点中
 
 ## Output Format
 
@@ -84,6 +100,13 @@
 
 ### 可能遗漏
 - [提示用户补充可能没被扫描到的信息]
+
+### 量化数据（从扫描中提取）
+- 源码文件数: [N]
+- 代码行数: [约 N 行]
+- 核心模块数: [N]
+- API 接口数: [N]（如有路由文件可统计）
+- 测试文件数: [N]
 ```
 
 ## Fallback: 无本地项目
