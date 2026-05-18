@@ -48,13 +48,31 @@
       路由文件（router, urls, routes）反映的功能范围
 ```
 
-### Step 5: Git Log (optional)
-```
-命令: bash: git -C <project_path> log --oneline -20
-目标: 了解开发活跃度和贡献范围
-关注: commit 频率、涉及的功能模块
+### Step 5: Git Contribution Analysis (optional, 仅 Git 仓库)
+
+如果项目是 Git 仓库，执行以下分析:
+
+命令序列:
+  1. git -C <project_path> log --oneline -20
+     → 最近 20 条提交概览
+  2. git -C <project_path> log --stat --oneline -10
+     → 带文件变更的提交记录
+  3. git -C <project_path> shortlog -sn
+     → 按作者统计提交数
+  4. git -C <project_path> log --format="%H %ai" --follow -- <高频修改的文件> | head -10
+     → 关键文件的修改历史
 如果失败（非 Git 仓库）: 跳过，不影响扫描
-```
+
+分析目标:
+- 开发周期（从最早和最晚提交推断）
+- 贡献者数量和各自的提交占比
+- 高频修改模块（从 `--stat` 中统计文件路径出现频率）
+- 用户的实际贡献范围（从 shortlog 中识别主要作者）
+
+注意:
+- 不分析具体代码 diff 内容（节省 token），只看文件路径和提交频率
+- 如果只有一个作者，不需要区分贡献
+- 统计数据仅作为参考，最终以用户确认为准
 
 ### Step 6: Quantification Scan (required)
 ```
@@ -118,6 +136,13 @@
 - 核心模块数: [N]
 - API 接口数: [N]（如有路由文件可统计）
 - 测试文件数: [N]
+
+### Git 贡献分析（仅 Git 仓库显示）
+- 开发周期：[起始日期] - [结束日期]
+- 总提交数：[N]（用户占 [M]）
+- 贡献者：[名字1]([X]次), [名字2]([Y]次)
+- 高频修改模块：[模块1], [模块2], [模块3]
+- 用户主要贡献：[基于高频修改文件推断的职责描述]
 ```
 
 ## Fallback: 无本地项目
