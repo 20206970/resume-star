@@ -13,7 +13,7 @@ AI 驱动的简历素材增强工具，基于 [Claude Code Skill](https://docs.a
 
 ## 产品形态
 
-一个 Claude Code Skill（`resume-star/`），直接运行在 Claude Code 环境中，无需额外部署。
+一组 Claude Code Skill 模块（`resume-star/`），直接运行在 Claude Code 环境中，无需额外部署。
 
 利用 Claude Code 内置能力：
 - 文件读取（Read、Glob、Grep）扫描项目
@@ -43,11 +43,21 @@ AI 驱动的简历素材增强工具，基于 [Claude Code Skill](https://docs.a
 
 在校生（本科/研究生），有课程项目或实习经历，但不确定如何提炼简历亮点。
 
-## 项目状态
+## 项目结构
 
-早期规划阶段，当前包含：
-- `docs/product-design.md` — 产品设计文档
-- `resume-star/` — Skill 实现
+```
+resume-star/
+  SKILL.md            # 主入口与流程编排
+  jd-analysis.md      # JD 解析模块
+  project-scan.md     # 项目扫描模块
+  star-examples.md    # STAR 示例库
+  interview-prep.md   # 面试准备题预测
+  interview-sim.md    # 模拟面试
+doc/
+  产品需求规格说明书.md  # PRD
+docs/
+  product-design.md    # 产品设计文档
+```
 
 ## License
 
